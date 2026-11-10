@@ -63,7 +63,7 @@ describe('Tier 1: Consultoria High-Conversion 5-Section Architecture', () => {
 
   it('T1-CON-04: Modalidades & Garantías (#modalidades) combines 3 contracting models, Technological Sovereignty, and 4 operational FAQs (#faq)', () => {
     assert.match(consultingSource, /id="modalidades"/, 'Must include #modalidades section');
-    assert.match(consultingSource, /SOBERANÍA TECNOLÓGICA/, 'Must highlight Technological Sovereignty guarantee');
+    assert.match(consultingSource, /TODO A TU NOMBRE/, 'Must highlight the ownership guarantee');
 
     if (doc) {
       const modalidadesSection = getElementById(doc, 'modalidades');
