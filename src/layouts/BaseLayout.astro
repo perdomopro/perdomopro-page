@@ -18,7 +18,7 @@ const {
   locale = urlLocale ?? DEFAULT_LOCALE,
   title,
   description,
-  ogImage = '/og-image.png',
+  ogImage = locale === 'en' ? '/og-image-en.png' : '/og-image.png',
   ogType = 'website',
   noindex = false,
 } = Astro.props;

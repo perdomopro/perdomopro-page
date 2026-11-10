@@ -201,8 +201,8 @@ describe('Tier 5 Adversarial: Bilingual Parity & DOM Integrity Challenge (5-Sect
 
     const csEs = getTextContent(secEs);
     const csEn = getTextContent(secEn);
-    assert.ok(csEs.includes('SOBERANÍA TECNOLÓGICA'), 'ES must include sovereignty badge');
-    assert.ok(csEn.includes('TECHNOLOGICAL SOVEREIGNTY'), 'EN must include sovereignty badge');
+    assert.ok(csEs.includes('TODO A TU NOMBRE'), 'ES must include ownership badge');
+    assert.ok(csEn.includes('EVERYTHING IN YOUR NAME'), 'EN must include ownership badge');
 
     const faqEs = querySelectorAll(getElementById(rootEs, 'faq'), byTag('details'));
     const faqEn = querySelectorAll(getElementById(rootEn, 'faq'), byTag('details'));
@@ -277,13 +277,13 @@ describe('Tier 5 Adversarial: Bilingual Parity & DOM Integrity Challenge (5-Sect
     assert.doesNotMatch(fullEs, /0[1-9]\s*\/\//, 'ES page must not use legacy double-slash // headers');
     assert.doesNotMatch(fullEn, /0[1-9]\s*\/\//, 'EN page must not use legacy double-slash // headers');
 
-    assert.match(fullEs, /01 \/ CONSULTORÍA PYME/);
+    assert.match(fullEs, /01 \/ TECNOLOGÍA PARA TU NEGOCIO/);
     assert.match(fullEs, /02 \/ SOLUCIONES/);
     assert.match(fullEs, /03 \/ PROCESO/);
     assert.match(fullEs, /04 \/ MODALIDADES Y GARANTÍAS/);
     assert.match(fullEs, /05 \/ CONTACTO/);
 
-    assert.match(fullEn, /01 \/ SMB CONSULTING/);
+    assert.match(fullEn, /01 \/ TECHNOLOGY FOR YOUR BUSINESS/);
     assert.match(fullEn, /02 \/ SOLUTIONS/);
     assert.match(fullEn, /03 \/ PROCESS/);
     assert.match(fullEn, /04 \/ MODELS & GUARANTEES/);
