@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
   },
   links: {
     email: 'contacto@perdomopro.com',
-    github: 'https://github.com/Perdomazo',
+    github: 'https://github.com/perdomopro',
     linkedin: 'https://www.linkedin.com/in/adrian-perdomo-24871a317',
   },
 } as const;

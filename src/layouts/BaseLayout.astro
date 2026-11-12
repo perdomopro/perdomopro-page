@@ -3,6 +3,8 @@ import '../styles/global.css';
 import { type Locale, DEFAULT_LOCALE, LOCALES } from '../i18n/config';
 import { getAlternateUrls, getHtmlLang, getLocaleFromUrl, useTranslations } from '../i18n/utils';
 import { siteConfig } from '../config/site';
+import geistSansUrl from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+import geistMonoUrl from '@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2?url';
 
 export interface Props {
   title?: string;
@@ -66,6 +68,8 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={geistSansUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={geistMonoUrl} as="font" type="font/woff2" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content={siteConfig.themeColor} />
 

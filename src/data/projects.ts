@@ -31,7 +31,7 @@ export const projectsData: readonly ProjectData[] = [
     number: '01',
     classification: 'personal',
     technologies: ['Python', 'SQLite', 'Elo', 'Dixon–Coles'],
-    href: 'https://github.com/Perdomazo/ScoreRecord',
+    href: 'https://github.com/perdomopro/ScoreRecord',
     preview: {
       src: '/images/projects/scorerecord-overview.jpg',
       alt: { 'es-MX': 'Vista general de la aplicación ScoreRecord', en: 'Overview of the ScoreRecord application' },
@@ -64,7 +64,7 @@ export const projectsData: readonly ProjectData[] = [
     number: '02',
     classification: 'software-project',
     technologies: ['Java 21', 'Spring Boot', 'JPA / Hibernate', 'MySQL', 'Swagger'],
-    href: 'https://github.com/Perdomazo/GadgetStock',
+    href: 'https://github.com/perdomopro/GadgetStock',
     content: {
       'es-MX': {
         title: 'GadgetStock',
@@ -93,7 +93,7 @@ export const projectsData: readonly ProjectData[] = [
     number: '03',
     classification: 'software-project',
     technologies: ['Python', 'Pandas', 'NumPy', 'NetworkX', 'Matplotlib', 'CustomTkinter'],
-    href: 'https://github.com/Perdomazo/Adrian-Quant-Lab-',
+    href: 'https://github.com/perdomopro/Adrian-Quant-Lab-',
     content: {
       'es-MX': {
         title: 'ETF Portfolio Analytics Tool',
@@ -122,7 +122,7 @@ export const projectsData: readonly ProjectData[] = [
     number: '04',
     classification: 'laboratory',
     technologies: ['Python', 'Freqtrade', 'Docker'],
-    href: 'https://github.com/Perdomazo/Adrian-Quant-Lab-',
+    href: 'https://github.com/perdomopro/Adrian-Quant-Lab-',
     content: {
       'es-MX': {
         title: 'Adrian Quant Lab',
@@ -151,9 +151,9 @@ export const projectsData: readonly ProjectData[] = [
     number: '05',
     classification: 'personal-site',
     technologies: ['Astro', 'TypeScript', 'Tailwind CSS', 'GitHub Actions', 'Azure Static Web Apps'],
-    href: 'https://github.com/Perdomazo/perdomopro',
+    href: 'https://github.com/perdomopro/perdomopro',
     liveHref: 'https://perdomopro.com/',
-    pipelineHref: 'https://github.com/Perdomazo/perdomopro/blob/main/.github/workflows/azure-static-web-apps.yml',
+    pipelineHref: 'https://github.com/perdomopro/perdomopro/blob/main/.github/workflows/azure-static-web-apps.yml',
     preview: {
       src: '/images/projects/perdomopro-home.jpg',
       alt: { 'es-MX': 'Página de inicio de PerdomoPro', en: 'PerdomoPro homepage' },
