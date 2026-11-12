@@ -38,6 +38,8 @@ export interface ContractingTier {
   desc: string;
   inclusions: string[];
   idealFor: string;
+  /** Either a headline price (lead + amount + unit) or a plain text line. */
+  price: { lead?: string; amount?: string; unit?: string; text?: string };
 }
 
 export interface SovereigntyBlock {
@@ -171,6 +173,7 @@ const copy = en
         {
           tierNumber: '01',
           badge: 'FIXED SCOPE',
+          price: { text: 'Fixed written quote' },
           name: 'Fixed-scope project',
           subtitle: 'Closed budget & delivery date',
           desc: 'End-to-end build of a concrete solution (internal control system, automation, or commercial catalog) with price and timeline locked upfront.',
@@ -185,6 +188,7 @@ const copy = en
         {
           tierNumber: '02',
           badge: 'PRIOR CLARITY',
+          price: { lead: 'From', amount: '$1,200', unit: 'MXN' },
           name: 'Operational diagnosis & roadmap',
           subtitle: 'Clarity before investing',
           desc: 'Practical review of your current workflows to spot where time or money is leaking and decide what makes sense to implement first.',
@@ -199,6 +203,7 @@ const copy = en
         {
           tierNumber: '03',
           badge: 'CONTINUITY',
+          price: { text: 'Based on agreed hours' },
           name: 'Monthly support & improvement plan',
           subtitle: 'Dedicated support without payroll',
           desc: 'Ongoing monthly availability to keep your tools healthy, assist your team, and add new features as your operation grows.',
@@ -392,6 +397,7 @@ const copy = en
         {
           tierNumber: '01',
           badge: 'ALCANCE CERRADO',
+          price: { text: 'Cotización cerrada por escrito' },
           name: 'Proyecto de alcance cerrado',
           subtitle: 'Presupuesto fijo y fecha de entrega',
           desc: 'Desarrollo completo de una solución puntual (sistema de control, automatización o catálogo comercial) con precio y entrega definidos desde el inicio.',
@@ -406,6 +412,7 @@ const copy = en
         {
           tierNumber: '02',
           badge: 'EVALUACIÓN PREVIA',
+          price: { lead: 'Desde', amount: '$1,200', unit: 'MXN' },
           name: 'Diagnóstico y hoja de ruta',
           subtitle: 'Claridad antes de invertir',
           desc: 'Revisión profunda de tus procesos actuales para detectar dónde se pierde tiempo o dinero y definir qué conviene implementar primero.',
@@ -420,6 +427,7 @@ const copy = en
         {
           tierNumber: '03',
           badge: 'CONTINUIDAD',
+          price: { text: 'Según las horas acordadas' },
           name: 'Póliza mensual de soporte y mejora',
           subtitle: 'Respaldo técnico sin nómina fija',
           desc: 'Acompañamiento mensual directo para mantener tus sistemas al día, resolver dudas operativas y sumar funciones conforme crece tu negocio.',
@@ -834,6 +842,22 @@ const copy = en
             <p class="mt-1 text-[11px] font-mono-tech text-accent-primary uppercase tracking-wider">
               {tier.subtitle}
             </p>
+
+            <div class="mt-3 sm:mt-4 flex min-h-9 sm:min-h-10 items-center gap-1.5 sm:gap-2">
+              {tier.price.amount ? (
+                <>
+                  {tier.price.lead && (
+                    <span class="font-mono-tech text-[11px] uppercase tracking-wider text-fg-muted">{tier.price.lead}</span>
+                  )}
+                  <span class="text-2xl sm:text-3xl font-medium tracking-tight text-fg-primary">{tier.price.amount}</span>
+                  {tier.price.unit && (
+                    <span class="font-mono-tech text-xs text-fg-secondary">{tier.price.unit}</span>
+                  )}
+                </>
+              ) : (
+                <span class="font-mono-tech text-xs sm:text-[13px] text-fg-secondary">{tier.price.text}</span>
+              )}
+            </div>
 
             <p class="mt-2.5 sm:mt-3.5 text-[13.5px] sm:text-sm leading-relaxed text-fg-secondary">
               {tier.desc}

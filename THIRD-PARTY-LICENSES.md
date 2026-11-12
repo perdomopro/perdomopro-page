@@ -33,3 +33,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
+
+---
+
+## Geist & Geist Mono (via @fontsource-variable)
+
+- **Repository:** https://github.com/vercel/geist-font
+- **Packages:** `@fontsource-variable/geist`, `@fontsource-variable/geist-mono`
+- **Copyright:** 2024 The Geist Project Authors
+- **License:** SIL Open Font License, Version 1.1 (https://openfontlicense.org)
+
+The fonts are self-hosted (Latin and Latin Extended subsets only). The full license text is
+available in `node_modules/@fontsource-variable/geist/LICENSE`.

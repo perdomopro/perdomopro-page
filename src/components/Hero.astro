@@ -14,6 +14,7 @@ const t = useTranslations(locale);
 const projectsHref = locale === 'en' ? '/en/#projects' : '#proyectos';
 const contactHref = locale === 'en' ? '/en/#contact' : '#contacto';
 const nextSectionHref = locale === 'en' ? '/en/#trajectory' : '#recorrido';
+const consultingHref = locale === 'en' ? '/en/consulting/' : '/consultoria/';
 const mobileEyebrow = locale === 'en'
   ? 'SOFTWARE · INFRASTRUCTURE · CLOUD'
   : 'SOFTWARE · INFRAESTRUCTURA · CLOUD';
@@ -125,6 +126,18 @@ const rotatingPhrases = locale === 'en'
               <span aria-hidden="true">→</span>
             </a>
           </div>
+
+          <!-- Quiet secondary pointer to consulting (text-level, not a CTA) -->
+          <div class="-mt-2">
+            <a
+              href={consultingHref}
+              class="group block py-2 text-center text-xs font-mono-tech leading-relaxed text-fg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+            >
+              <span class="block">{t('hero.consultingLead')}</span>
+              <span class="text-fg-primary underline underline-offset-4 decoration-border-muted transition-colors group-hover:text-accent-primary group-hover:decoration-accent-primary">{t('hero.consultingLink')}</span>
+              <span class="text-fg-muted group-hover:text-accent-primary" aria-hidden="true">&nbsp;→</span>
+            </a>
+          </div>
         </div>
 
         <!-- DESKTOP & TABLET (sm+): Original Dual CTAs & Inline Social Channels (100% Untouched) -->
@@ -187,6 +200,16 @@ const rotatingPhrases = locale === 'en'
               <span>{siteConfig.links.email}</span>
             </a>
           </div>
+
+          <!-- Quiet secondary pointer to consulting (text-level, not a CTA) -->
+          <a
+            href={consultingHref}
+            class="group inline-flex items-center gap-2 py-1 text-xs font-mono-tech text-fg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+          >
+            <span>{t('hero.consultingLead')}</span>
+            <span class="text-fg-primary underline underline-offset-4 decoration-border-muted transition-colors group-hover:text-accent-primary group-hover:decoration-accent-primary">{t('hero.consultingLink')}</span>
+            <span class="text-fg-muted transition-transform duration-150 group-hover:translate-x-1 group-hover:text-accent-primary" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
